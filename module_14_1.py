@@ -32,7 +32,7 @@ cursor.executemany("INSERT INTO Users (username, email, age, balance) VALUES (?,
 cursor.execute("UPDATE Users SET balance=balance+500 WHERE id%2=1")
 
 # Удалить каждую 3ью запись
-cursor.execute("DELETE FROM Users WHERE id%3=0")
+cursor.execute("DELETE FROM Users WHERE id%3=1")
 
 # Выбрать все записи, где возраст не равен 60
 cursor.execute("SELECT * FROM Users WHERE age!=60")
