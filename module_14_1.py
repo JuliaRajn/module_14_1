@@ -29,7 +29,7 @@ users = [
 cursor.executemany("INSERT INTO Users (username, email, age, balance) VALUES (?, ?, ?, ?)", users)
 
 # Обновить balance для каждой 2ой записи
-cursor.execute("UPDATE Users SET balance=balance+500 WHERE id%2=1")
+cursor.execute("UPDATE Users SET balance=500 WHERE id%2=1")
 
 # Удалить каждую 3ью запись
 cursor.execute("DELETE FROM Users WHERE id%3=1")
